@@ -46,8 +46,8 @@ export default function Header() {
           {/* Desktop Nav */}
           <nav className="hidden lg:flex items-center gap-8">
             <ul className="flex items-center gap-6">
-              {NAV_LINKS.map((link: { name: string; href: string }) => (
-                <li key={link.name}>
+              {NAV_LINKS.map((link) => (
+                <li key={link.label}>
                   <a
                     href={link.href}
                     onClick={(e) => handleScrollTo(e, link.href)}
@@ -55,7 +55,7 @@ export default function Header() {
                       isScrolled ? 'text-slate-600' : 'text-slate-200'
                     }`}
                   >
-                    {link.name}
+                    {link.label}
                   </a>
                 </li>
               ))}
@@ -92,9 +92,9 @@ export default function Header() {
           >
             <nav className="flex-1 overflow-y-auto">
               <ul className="flex flex-col gap-6">
-                {NAV_LINKS.map((link: { name: string; href: string }) => (
+                {NAV_LINKS.map((link) => (
                   <motion.li
-                    key={link.name}
+                    key={link.label}
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.1 }}
@@ -104,7 +104,7 @@ export default function Header() {
                       onClick={(e) => handleScrollTo(e, link.href)}
                       className="text-2xl font-bold text-slate-800 hover:text-amber-500 block"
                     >
-                      {link.name}
+                      {link.label}
                     </a>
                   </motion.li>
                 ))}

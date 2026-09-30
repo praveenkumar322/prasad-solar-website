@@ -81,10 +81,10 @@ const Reviews: React.FC = () => {
                     </blockquote>
                     <div className="flex items-center mt-auto">
                       <div className="w-10 h-10 rounded-full bg-blue-900 text-white flex items-center justify-center font-bold mr-3">
-                        {review.author.charAt(0)}
+                        {review.name.charAt(0)}
                       </div>
                       <div>
-                        <div className="font-bold text-slate-900">{review.author}</div>
+                        <div className="font-bold text-slate-900">{review.name}</div>
                         <div className="text-xs text-slate-500">Verified Customer · Justdial</div>
                       </div>
                     </div>
