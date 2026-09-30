@@ -1,9 +1,9 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Star, ChevronLeft, ChevronRight } from 'lucide-react';
-import { MOCK_REVIEWS, BUSINESS } from '../data/business';
+import { MOCK_REVIEWS } from '../data/business';
 
-const Reviews: React.FC = () => {
+export default function Reviews() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [cardsToShow, setCardsToShow] = useState(1);
 
@@ -140,6 +140,4 @@ const Reviews: React.FC = () => {
       </div>
     </section>
   );
-};
-
-export default Reviews;
+}

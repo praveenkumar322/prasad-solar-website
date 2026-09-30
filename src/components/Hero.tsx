@@ -1,4 +1,3 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 import { ArrowRight, Phone, Star, ShieldCheck, MapPin, Users } from 'lucide-react';
 import { BUSINESS_PHONE } from '../data/business';

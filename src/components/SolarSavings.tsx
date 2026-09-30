@@ -1,9 +1,7 @@
-import React from 'react';
 import { motion } from 'framer-motion';
-import { SUBSIDY_INFO } from '../data/business';
 import { ArrowRight, CheckCircle2 } from 'lucide-react';
 
-const SolarSavings: React.FC = () => {
+export default function SolarSavings() {
   return (
     <section id="savings" className="py-20 bg-white overflow-hidden">
       <div className="container mx-auto px-4 max-w-6xl">
@@ -140,6 +138,4 @@ const SolarSavings: React.FC = () => {
       </div>
     </section>
   );
-};
-
-export default SolarSavings;
+}

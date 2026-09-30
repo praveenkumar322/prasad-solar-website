@@ -1,9 +1,8 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 import { MapPin, Phone, MessageCircle, Mail } from 'lucide-react';
 import { BUSINESS, BUSINESS_PHONE, BUSINESS_WHATSAPP, BUSINESS_EMAIL } from '../data/business';
 
-export const Footer: React.FC = () => {
+export const Footer = () => {
   return (
     <footer id="contact" className="bg-[#1e293b] text-white border-t border-[#0f172a]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-20">
@@ -20,11 +19,11 @@ export const Footer: React.FC = () => {
             <p className="text-slate-300 text-lg mb-6">Trusted solar solutions since {BUSINESS.established}</p>
             <div className="flex items-start gap-3 text-slate-300 mb-6">
               <MapPin className="w-6 h-6 shrink-0 mt-0.5 text-[#f59e0b]" />
-              <p className="leading-relaxed">{BUSINESS.address}</p>
+              <p className="leading-relaxed">{BUSINESS.address.full}</p>
             </div>
             <p className="text-slate-300">
               <span className="font-semibold text-white block mb-1">Hours:</span>
-              {BUSINESS.hours} | Mon – Sat
+              {BUSINESS.operatingHours} | Mon – Sat
             </p>
           </div>
 

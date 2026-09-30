@@ -1,4 +1,3 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 import { Clock, Award, Heart, Shield, Star, Zap } from 'lucide-react';
 

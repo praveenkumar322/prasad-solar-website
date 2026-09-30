@@ -78,12 +78,12 @@ export const QuoteForm: React.FC = () => {
               const Icon = IconMap[opt.icon];
               return (
                 <div 
-                  key={opt.id}
-                  onClick={() => handleUpdateField('requirement', opt.id)}
-                  className={`p-5 border-2 rounded-xl cursor-pointer transition-all ${formData.requirement === opt.id ? 'border-[#f59e0b] bg-amber-50' : 'border-slate-200 hover:border-[#f59e0b] hover:bg-slate-50'}`}
+                  key={opt.value}
+                  onClick={() => handleUpdateField('requirement', opt.value)}
+                  className={`p-5 border-2 rounded-xl cursor-pointer transition-all ${formData.requirement === opt.value ? 'border-[#f59e0b] bg-amber-50' : 'border-slate-200 hover:border-[#f59e0b] hover:bg-slate-50'}`}
                 >
                   <div className="flex items-start gap-4">
-                    {Icon && <Icon className={`w-6 h-6 shrink-0 ${formData.requirement === opt.id ? 'text-[#f59e0b]' : 'text-[#64748b]'}`} />}
+                    {Icon && <Icon className={`w-6 h-6 shrink-0 ${formData.requirement === opt.value ? 'text-[#f59e0b]' : 'text-[#64748b]'}`} />}
                     <div>
                       <h3 className="font-semibold text-[#1e293b]">{opt.label}</h3>
                       {opt.description && <p className="text-sm text-[#64748b] mt-1">{opt.description}</p>}
@@ -101,11 +101,11 @@ export const QuoteForm: React.FC = () => {
               const Icon = IconMap[opt.icon];
               return (
                 <div 
-                  key={opt.id}
-                  onClick={() => handleUpdateField('propertyType', opt.id)}
-                  className={`p-5 border-2 rounded-xl cursor-pointer transition-all flex items-center gap-3 ${formData.propertyType === opt.id ? 'border-[#f59e0b] bg-amber-50' : 'border-slate-200 hover:border-[#f59e0b] hover:bg-slate-50'}`}
+                  key={opt.value}
+                  onClick={() => handleUpdateField('propertyType', opt.value)}
+                  className={`p-5 border-2 rounded-xl cursor-pointer transition-all flex items-center gap-3 ${formData.propertyType === opt.value ? 'border-[#f59e0b] bg-amber-50' : 'border-slate-200 hover:border-[#f59e0b] hover:bg-slate-50'}`}
                 >
-                  {Icon && <Icon className={`w-5 h-5 shrink-0 ${formData.propertyType === opt.id ? 'text-[#f59e0b]' : 'text-[#64748b]'}`} />}
+                  {Icon && <Icon className={`w-5 h-5 shrink-0 ${formData.propertyType === opt.value ? 'text-[#f59e0b]' : 'text-[#64748b]'}`} />}
                   <span className="font-medium text-[#1e293b]">{opt.label}</span>
                 </div>
               );
@@ -117,9 +117,9 @@ export const QuoteForm: React.FC = () => {
           <div className="flex flex-col gap-3">
             {BILL_OPTIONS.map((opt) => (
               <div 
-                key={opt.id}
-                onClick={() => handleUpdateField('billAmount', opt.id)}
-                className={`p-5 border-2 rounded-xl cursor-pointer transition-all text-center ${formData.billAmount === opt.id ? 'border-[#f59e0b] bg-amber-50 font-semibold text-[#f59e0b]' : 'border-slate-200 hover:border-slate-300 font-medium text-[#1e293b]'}`}
+                key={opt.value}
+                onClick={() => handleUpdateField('billAmount', opt.value)}
+                className={`p-5 border-2 rounded-xl cursor-pointer transition-all text-center ${formData.billAmount === opt.value ? 'border-[#f59e0b] bg-amber-50 font-semibold text-[#f59e0b]' : 'border-slate-200 hover:border-slate-300 font-medium text-[#1e293b]'}`}
               >
                 {opt.label}
               </div>
@@ -199,16 +199,16 @@ export const QuoteForm: React.FC = () => {
               const Icon = IconMap[opt.icon];
               return (
                 <div 
-                  key={opt.id}
-                  onClick={() => handleUpdateField('contactMethod', opt.id)}
-                  className={`p-5 border-2 rounded-xl cursor-pointer transition-all flex items-center justify-between ${formData.contactMethod === opt.id ? 'border-[#f59e0b] bg-amber-50' : 'border-slate-200 hover:border-[#f59e0b] hover:bg-slate-50'}`}
+                  key={opt.value}
+                  onClick={() => handleUpdateField('contactMethod', opt.value)}
+                  className={`p-5 border-2 rounded-xl cursor-pointer transition-all flex items-center justify-between ${formData.contactMethod === opt.value ? 'border-[#f59e0b] bg-amber-50' : 'border-slate-200 hover:border-[#f59e0b] hover:bg-slate-50'}`}
                 >
                   <div className="flex items-center gap-3">
-                    {Icon && <Icon className={`w-5 h-5 ${formData.contactMethod === opt.id ? 'text-[#f59e0b]' : 'text-[#64748b]'}`} />}
+                    {Icon && <Icon className={`w-5 h-5 ${formData.contactMethod === opt.value ? 'text-[#f59e0b]' : 'text-[#64748b]'}`} />}
                     <span className="font-medium text-[#1e293b]">{opt.label}</span>
                   </div>
-                  <div className={`w-5 h-5 rounded-full border-2 flex items-center justify-center ${formData.contactMethod === opt.id ? 'border-[#f59e0b] bg-white' : 'border-slate-300 bg-white'}`}>
-                    {formData.contactMethod === opt.id && <div className="w-2.5 h-2.5 rounded-full bg-[#f59e0b]"></div>}
+                  <div className={`w-5 h-5 rounded-full border-2 flex items-center justify-center ${formData.contactMethod === opt.value ? 'border-[#f59e0b] bg-white' : 'border-slate-300 bg-white'}`}>
+                    {formData.contactMethod === opt.value && <div className="w-2.5 h-2.5 rounded-full bg-[#f59e0b]"></div>}
                   </div>
                 </div>
               );
